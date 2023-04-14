@@ -8,6 +8,8 @@
 * [Terraform Cloud Workspace `users`](#terraform-cloud-workspace-users)
   * [Table of Contents](#table-of-contents)
   * [Usage](#usage)
+    * [Inputs](#inputs)
+    * [Outputs](#outputs)
   * [Author Information](#author-information)
   * [License](#license)
 <!-- TOC -->
@@ -18,6 +20,25 @@ This repository uses a standard Terraform workflow (`init`, `plan`, `apply`).
 
 For more information, including detailed usage guidelines, see the [Terraform documentation](https://developer.hashicorp.com/terraform/cli/commands).
 
+<!-- BEGIN_TF_DOCS -->
+### Inputs
+
+| Name | Description | Type | Required |
+|------|-------------|------|:--------:|
+| management_region_aws | AWS-specific `Management` Region Identifier. | `string` | yes |
+| okta_api_token | This is the API token to interact with your Okta organization. | `string` | yes |
+| okta_org_name | This is the organization name of your Okta account. | `string` | yes |
+| project_identifier | Human-readable Project Identifier. | `string` | yes |
+| okta_backoff | Whether to use exponential back off strategy for rate limits. | `bool` | no |
+| okta_base_url | This is the base URL of your Okta account. | `string` | no |
+### Outputs
+
+| Name | Description |
+|------|-------------|
+| okta_brand | Exported Attributes for `okta_brand`. |
+| okta_org_configuration | Exported Attributes for `okta_org_configuration`. |
+| okta_theme | Exported Attributes for `okta_theme`. |
+<!-- END_TF_DOCS -->
 ## Author Information
 
 This module is maintained by the contributors listed on [GitHub](https://github.com/workloads/users/graphs/contributors).
