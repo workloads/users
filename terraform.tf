@@ -27,7 +27,7 @@ terraform {
     # see https://registry.terraform.io/providers/okta/okta/3.45.0
     okta = {
       source  = "okta/okta"
-      version = "3.45.0"
+      version = "4.0.0"
     }
   }
 
