@@ -31,7 +31,7 @@ For more information, including detailed usage guidelines, see the [Terraform do
 | project_identifier | Human-readable Project Identifier. | `string` | yes |
 | okta_backoff | Whether to use exponential back off strategy for rate limits. | `bool` | no |
 | okta_base_url | This is the base URL of your Okta account. | `string` | no |
-| password_recipe | Complex Object of configuration for Password Recipes. | <pre>map({<br>    email_token_lifetime = number<br>    max_age              = number<br>    max_attempts         = number<br>    min_length           = number<br>  })</pre> | no |
+| password_recipe | Complex Object of configuration for Password Recipes. | <pre>object({<br>    unlock_minutes                = number<br>    email_token_lifetime          = number<br>    history_count                 = number<br>    max_age                       = number<br>    max_attempts                  = number<br>    min_length                    = number<br>    recovery_email_token_lifetime = number<br>    require_lowercase             = bool<br>    require_uppercase             = bool<br>    require_symbols               = bool<br>    require_numbers               = bool<br>  })</pre> | no |
 
 ### Outputs
 
