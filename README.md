@@ -42,7 +42,7 @@ For more information, including detailed usage guidelines, see the [Terraform do
 
 ## Author Information
 
-This module is maintained by the contributors listed on [GitHub](https://github.com/workloads/users/graphs/contributors).
+This repository is maintained by the contributors listed on [GitHub](https://github.com/workloads/users/graphs/contributors).
 
 ## License
 
