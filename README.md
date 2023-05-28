@@ -1,6 +1,6 @@
 # Terraform Cloud Workspace `users`
 
-> This directory manages the lifecycle of the User Directory and Configuration for [@workloads](https://github.com/workloads).
+> This directory manages User Directories and Configuration for [@workloads](https://github.com/workloads).
 
 ## Table of Contents
 
