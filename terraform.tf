@@ -24,7 +24,7 @@ terraform {
       version = ">= 0.66.0, < 1.0.0"
     }
 
-    # see https://registry.terraform.io/providers/okta/okta/4.0.1
+    # see https://registry.terraform.io/providers/okta/okta/4.1.0
     okta = {
       source  = "okta/okta"
       version = "4.1.0"
