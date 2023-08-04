@@ -60,7 +60,7 @@ data "okta_brands" "main" {}
 #
 # also see https://registry.terraform.io/providers/okta/okta/latest/docs/resources/theme
 resource "okta_theme" "main" {
-  brand_id = one(data.okta_brands.main.brands[*].id)
+  brand_id = element(data.okta_brands.main.brands[*].id, 0)
 
   # format must be 420x120 pixels
   logo = "./assets/logo.png"
