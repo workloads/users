@@ -71,10 +71,10 @@ resource "okta_theme" "main" {
   # remove any non-Terraform-managed background image
   background_image = ""
 
-  primary_color_hex          = "#45b5c4"
+  primary_color_hex          = "#282433"
   primary_color_contrast_hex = "#ffffff"
 
-  secondary_color_hex          = "#1a1a1a"
+  secondary_color_hex          = "#282433"
   secondary_color_contrast_hex = "#ffffff"
 
   # uses logo and favicon from theme configuration; sets background color to `secondary_color_hex`
