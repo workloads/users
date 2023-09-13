@@ -8,6 +8,12 @@ output "okta_org_configuration" {
 #  value       = okta_brand.main
 #}
 
+output "okta_idp_social_github" {
+  description = "Exported Attributes for `okta_idp_social.github`."
+  value       = okta_idp_social.github
+  sensitive   = true
+}
+
 #output "okta_theme" {
 #  description = "Exported Attributes for `okta_theme`."
 #  value       = okta_theme.main

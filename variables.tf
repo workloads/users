@@ -31,6 +31,17 @@ variable "okta_base_url" {
   default     = "okta.com" # generally either `okta.com` or `oktapreview.com`, but other values are possible (specifically: PubSec settings)
 }
 
+variable "okta_social_login_github_client_id" {
+  type        = string
+  description = "Client ID of GitHub Application for Okta Social Login."
+}
+
+variable "okta_social_login_github_client_secret" {
+  type        = string
+  description = "Client Secret of GitHub Application for Okta Social Login."
+  sensitive   = true
+}
+
 variable "password_recipe" {
   type = object({
     unlock_minutes                = number
