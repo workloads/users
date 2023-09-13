@@ -13,26 +13,26 @@ output "okta_org_configuration" {
 #  value       = okta_theme.main
 #}
 
-#output "okta_authenticator_okta_email" {
-#  description = "Exported Attributes for `okta_authenticator.okta_email`."
-#  value       = okta_authenticator.okta_email
-#  sensitive   = true
-#}
+output "okta_authenticator_okta_email" {
+  description = "Exported Attributes for `okta_authenticator.okta_email`."
+  value       = okta_authenticator.okta_email
+  sensitive   = true
+}
 
-#output "okta_authenticator_okta_password" {
-#  description = "Exported Attributes for `okta_authenticator.okta_password`."
-#  value       = okta_authenticator.okta_password
-#  sensitive   = true
-#}
+output "okta_authenticator_okta_password" {
+  description = "Exported Attributes for `okta_authenticator.okta_password`."
+  value       = okta_authenticator.okta_password
+  sensitive   = true
+}
 
-#output "okta_authenticator_security_question" {
-#  description = "Exported Attributes for `okta_authenticator.security_question`."
-#  value       = okta_authenticator.security_question
-#  sensitive   = true
-#}
+output "okta_authenticator_security_question" {
+  description = "Exported Attributes for `okta_authenticator.security_question`."
+  value       = okta_authenticator.security_question
+  sensitive   = true
+}
 
-#output "okta_authenticator_okta_verify" {
-#  description = "Exported Attributes for `okta_authenticator.okta_verify`."
-#  value       = okta_authenticator.okta_verify
-#  sensitive   = true
-#}
+output "okta_authenticator_okta_verify" {
+  description = "Exported Attributes for `okta_authenticator.okta_verify`."
+  value       = okta_authenticator.okta_verify
+  sensitive   = true
+}

@@ -7,12 +7,21 @@
 <!-- TOC -->
 * [Terraform Cloud Workspace `users`](#terraform-cloud-workspace-users)
   * [Table of Contents](#table-of-contents)
+  * [Requirements](#requirements)
   * [Usage](#usage)
     * [Inputs](#inputs)
     * [Outputs](#outputs)
   * [Author Information](#author-information)
   * [License](#license)
 <!-- TOC -->
+
+## Requirements
+
+- HashiCorp Terraform `1.5.x` or [newer](https://developer.hashicorp.com/packer/downloads)
+
+Optional, and only needed for documentation generation:
+
+- `terraform-docs` `0.16.0` or [newer](https://terraform-docs.io/user-guide/installation/)
 
 ## Usage
 
@@ -37,6 +46,10 @@ For more information, including detailed usage guidelines, see the [Terraform do
 
 | Name | Description |
 |------|-------------|
+| okta_authenticator_okta_email | Exported Attributes for `okta_authenticator.okta_email`. |
+| okta_authenticator_okta_password | Exported Attributes for `okta_authenticator.okta_password`. |
+| okta_authenticator_okta_verify | Exported Attributes for `okta_authenticator.okta_verify`. |
+| okta_authenticator_security_question | Exported Attributes for `okta_authenticator.security_question`. |
 | okta_org_configuration | Exported Attributes for `okta_org_configuration`. |
 <!-- END_TF_DOCS -->
 

@@ -19,10 +19,8 @@
 # also see https://registry.terraform.io/providers/okta/okta/latest/docs/resources/brand
 resource "okta_brand" "main" {
   agree_to_custom_privacy_policy = true
-  custom_privacy_policy_url      = "https://github.com/workloads/.github/blob/main/PRIVACY.md"
-
-  # TODO: enable AWS
-  #custom_privacy_policy_url      = "https://${data.aws_route53_zone.main.name}/privacy-policy"
+  custom_privacy_policy_url      = "https://go.workloads.io/privacy-policy"
+  name                           = "${var.okta_org_name}_default"
 
   # be grateful for free Okta Organizations
   remove_powered_by_okta = false
