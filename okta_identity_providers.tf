@@ -1,6 +1,6 @@
 # see https://registry.terraform.io/providers/okta/okta/latest/docs/resources/idp_social
 resource "okta_idp_social" "github" {
-  account_link_action = "AUTO"
+  account_link_action  = "AUTO"
   client_id            = var.okta_social_login_github_client_id
   client_secret        = var.okta_social_login_github_client_secret
   deprovisioned_action = "NONE"
