@@ -14,22 +14,22 @@ terraform {
 
   # see https://developer.hashicorp.com/terraform/language/settings#specifying-provider-requirements
   required_providers {
-    # see https://registry.terraform.io/providers/hashicorp/aws/5.20.0
+    # see https://registry.terraform.io/providers/hashicorp/aws/5.25.0
     aws = {
       source  = "hashicorp/aws"
-      version = ">= 5.20.0, < 6.0.0"
+      version = ">= 5.25.0, < 6.0.0"
     }
 
-    # see https://registry.terraform.io/providers/hashicorp/hcp/0.72.2
+    # see https://registry.terraform.io/providers/hashicorp/hcp/0.76.0
     hcp = {
       source  = "hashicorp/hcp"
-      version = ">= 0.72.2, < 1.0.0"
+      version = ">= 0.76.0, < 1.0.0"
     }
 
-    # see https://registry.terraform.io/providers/okta/okta/4.4.2
+    # see https://registry.terraform.io/providers/okta/okta/4.5.0
     okta = {
       source  = "okta/okta"
-      version = "4.4.2"
+      version = "4.5.0"
     }
   }
 
