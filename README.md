@@ -17,7 +17,7 @@
 
 ## Requirements
 
-- HashiCorp Terraform `1.5.x` or [newer](https://developer.hashicorp.com/packer/downloads)
+- HashiCorp Terraform `1.6.x` or [newer](https://developer.hashicorp.com/packer/downloads)
 
 Optional, and only needed for documentation generation:
 
