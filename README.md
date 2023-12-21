@@ -1,6 +1,6 @@
 # Terraform Cloud Workspace `users`
 
-> This directory manages User Directories and Configuration for [@workloads](https://github.com/workloads).
+> This repository manages user directories for [@workloads](https://github.com/workloads).
 
 ## Table of Contents
 
@@ -8,20 +8,25 @@
 * [Terraform Cloud Workspace `users`](#terraform-cloud-workspace-users)
   * [Table of Contents](#table-of-contents)
   * [Requirements](#requirements)
+    * [Development](#development)
   * [Usage](#usage)
     * [Inputs](#inputs)
     * [Outputs](#outputs)
-  * [Author Information](#author-information)
+  * [Notes](#notes)
+    * [Sensitive Data](#sensitive-data)
+  * [Contributors](#contributors)
   * [License](#license)
 <!-- TOC -->
 
 ## Requirements
 
-- HashiCorp Terraform `1.6.x` or [newer](https://developer.hashicorp.com/packer/downloads)
+- HashiCorp Terraform `1.6.x` or [newer](https://developer.hashicorp.com/terraform/downloads)
 
-Optional, and only needed for documentation generation:
+### Development
 
-- `terraform-docs` `0.16.0` or [newer](https://terraform-docs.io/user-guide/installation/)
+For development and testing of this repository:
+
+- `terraform-docs` `0.17.0` or [newer](https://terraform-docs.io/user-guide/installation/)
 
 ## Usage
 
@@ -37,6 +42,8 @@ For more information, including detailed usage guidelines, see the [Terraform do
 | management_region_aws | AWS-specific `Management` Region Identifier. | `string` | yes |
 | okta_api_token | This is the API token to interact with your Okta organization. | `string` | yes |
 | okta_org_name | This is the organization name of your Okta account. | `string` | yes |
+| okta_social_login_github_client_id | Client ID of GitHub Application for Okta Social Login. | `string` | yes |
+| okta_social_login_github_client_secret | Client Secret of GitHub Application for Okta Social Login. | `string` | yes |
 | project_identifier | Human-readable Project Identifier. | `string` | yes |
 | okta_backoff | Whether to use exponential back off strategy for rate limits. | `bool` | no |
 | okta_base_url | This is the base URL of your Okta account. | `string` | no |
@@ -50,19 +57,24 @@ For more information, including detailed usage guidelines, see the [Terraform do
 | okta_authenticator_okta_password | Exported Attributes for `okta_authenticator.okta_password`. |
 | okta_authenticator_okta_verify | Exported Attributes for `okta_authenticator.okta_verify`. |
 | okta_authenticator_security_question | Exported Attributes for `okta_authenticator.security_question`. |
+| okta_idp_social_github | Exported Attributes for `okta_idp_social.github`. |
 | okta_org_configuration | Exported Attributes for `okta_org_configuration`. |
 <!-- END_TF_DOCS -->
 
-## Author Information
+## Notes
 
-This repository is maintained by the contributors listed on [GitHub](https://github.com/workloads/users/graphs/contributors).
+### Sensitive Data
+
+Terraform state may contain [sensitive data](https://developer.hashicorp.com/terraform/language/state/sensitive-data). This workspace uses [Terraform Cloud](https://developer.hashicorp.com/terraform/cloud-docs) to safely store state, and encrypt the data at rest.
+
+## Contributors
+
+For a list of current (and past) contributors to this repository, see [GitHub](https://github.com/workloads/users/graphs/contributors).
 
 ## License
 
 Licensed under the Apache License, Version 2.0 (the "License").
 
-You may obtain a copy of the License at [apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an _"AS IS"_ basis, without WARRANTIES or conditions of any kind, either express or implied.
+You may download a copy of the License at [apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 See the License for the specific language governing permissions and limitations under the License.
