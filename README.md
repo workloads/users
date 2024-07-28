@@ -1,11 +1,11 @@
-# Terraform Cloud Workspace `users`
+# HCP Terraform Workspace `users`
 
 > This repository manages user directories for [@workloads](https://github.com/workloads).
 
 ## Table of Contents
 
 <!-- TOC -->
-* [Terraform Cloud Workspace `users`](#terraform-cloud-workspace-users)
+* [HCP Terraform Workspace `users`](#hcp-terraform-workspace-users)
   * [Table of Contents](#table-of-contents)
   * [Requirements](#requirements)
     * [Development](#development)
@@ -65,7 +65,7 @@ For more information, including detailed usage guidelines, see the [Terraform do
 
 ### Sensitive Data
 
-Terraform state may contain [sensitive data](https://developer.hashicorp.com/terraform/language/state/sensitive-data). This workspace uses [Terraform Cloud](https://developer.hashicorp.com/terraform/cloud-docs) to safely store state, and encrypt the data at rest.
+Terraform state may contain [sensitive data](https://developer.hashicorp.com/terraform/language/state/sensitive-data). This workspace uses [HCP Terraform](https://developer.hashicorp.com/terraform/cloud-docs) to safely store state, and encrypt the data at rest.
 
 ## Contributors
 
