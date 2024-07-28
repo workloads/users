@@ -16,6 +16,7 @@ resource "okta_authenticator" "okta_password" {
   key                = "okta_password"
   legacy_ignore_name = false
   name               = "Password"
+  status             = "ACTIVE"
 
   settings = jsonencode({
     "allowedFor" : "authentication"
