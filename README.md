@@ -42,8 +42,6 @@ For more information, including detailed usage guidelines, see the [Terraform do
 | management_region_aws | AWS-specific `Management` Region Identifier. | `string` | yes |
 | okta_api_token | This is the API token to interact with your Okta organization. | `string` | yes |
 | okta_org_name | This is the organization name of your Okta account. | `string` | yes |
-| okta_social_login_github_client_id | Client ID of GitHub Application for Okta Social Login. | `string` | yes |
-| okta_social_login_github_client_secret | Client Secret of GitHub Application for Okta Social Login. | `string` | yes |
 | project_identifier | Human-readable Project Identifier. | `string` | yes |
 | tfe_team_token_viewers | HCP Terraform `viewers` Team Token. | `string` | yes |
 | okta_backoff | Whether to use exponential back off strategy for rate limits. | `bool` | no |
