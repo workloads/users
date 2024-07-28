@@ -42,3 +42,8 @@ output "okta_authenticator_okta_verify" {
   value       = okta_authenticator.okta_verify
   sensitive   = true
 }
+
+output "tfe_workspace_terraform_version" {
+  description = "Terraform version identifier of current HCP Terraform Workspace."
+  value       = data.tfe_workspace.main.terraform_version
+}

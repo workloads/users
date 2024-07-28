@@ -1,12 +1,10 @@
 terraform {
-  # see https://developer.hashicorp.com/terraform/language/settings/terraform-cloud
+  # see https://developer.hashicorp.com/terraform/language/settings/cloud
   cloud {
-    # see https://app.terraform.io/app/workloads/workspaces
-    # and https://developer.hashicorp.com/terraform/cli/cloud/settings#organization
+    # see https://developer.hashicorp.com/terraform/cli/cloud/settings#organization
     organization = "workloads"
 
-    # see https://app.terraform.io/app/workloads/users
-    # and https://developer.hashicorp.com/terraform/cli/cloud/settings#workspaces
+    # see https://developer.hashicorp.com/terraform/cli/cloud/settings#workspaces
     workspaces {
       name = "users"
     }
@@ -30,6 +28,12 @@ terraform {
     okta = {
       source  = "okta/okta"
       version = "4.9.1"
+    }
+
+    # see https://registry.terraform.io/providers/hashicorp/tfe/0.57.0
+    tfe = {
+      source = "hashicorp/tfe"
+      version = "0.57.0"
     }
   }
 
