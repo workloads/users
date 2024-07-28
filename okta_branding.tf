@@ -57,33 +57,33 @@ data "okta_brands" "main" {}
 # 3.) Use the `okta_theme` Terraform resource as normal
 #
 # also see https://registry.terraform.io/providers/okta/okta/latest/docs/resources/theme
-resource "okta_theme" "main" {
-  brand_id = tolist(data.okta_brands.main.brands)[0].id
-
-  # format must be 420x120 pixels
-  logo = "./assets/logo.png"
-
-  # format must be (at most) 512x512 pixels
-  favicon = "./assets/favicon.png"
-
-  # remove any non-Terraform-managed background image
-  background_image = ""
-
-  primary_color_hex          = "#282433"
-  primary_color_contrast_hex = "#ffffff"
-
-  secondary_color_hex          = "#282433"
-  secondary_color_contrast_hex = "#ffffff"
-
-  # uses logo and favicon from theme configuration; sets background color to `secondary_color_hex`
-  sign_in_page_touch_point_variant = "BACKGROUND_SECONDARY_COLOR"
-
-  # uses logo and favicon from theme configuration; sets background color to white
-  end_user_dashboard_touch_point_variant = "LOGO_ON_FULL_WHITE_BACKGROUND"
-
-  # uses logo and favicon from theme configuration; sets background color to `secondary_color_hex`
-  error_page_touch_point_variant = "BACKGROUND_SECONDARY_COLOR"
-
-  # uses logo and favicon from theme configuration
-  email_template_touch_point_variant = "FULL_THEME"
-}
+# resource "okta_theme" "main" {
+#   brand_id = tolist(data.okta_brands.main.brands)[0].id
+#
+#   # format must be 420x120 pixels
+#   logo = "./assets/logo.png"
+#
+#   # format must be (at most) 512x512 pixels
+#   favicon = "./assets/favicon.png"
+#
+#   # remove any non-Terraform-managed background image
+#   background_image = ""
+#
+#   primary_color_hex          = "#282433"
+#   primary_color_contrast_hex = "#ffffff"
+#
+#   secondary_color_hex          = "#282433"
+#   secondary_color_contrast_hex = "#ffffff"
+#
+#   # uses logo and favicon from theme configuration; sets background color to `secondary_color_hex`
+#   sign_in_page_touch_point_variant = "BACKGROUND_SECONDARY_COLOR"
+#
+#   # uses logo and favicon from theme configuration; sets background color to white
+#   end_user_dashboard_touch_point_variant = "LOGO_ON_FULL_WHITE_BACKGROUND"
+#
+#   # uses logo and favicon from theme configuration; sets background color to `secondary_color_hex`
+#   error_page_touch_point_variant = "BACKGROUND_SECONDARY_COLOR"
+#
+#   # uses logo and favicon from theme configuration
+#   email_template_touch_point_variant = "FULL_THEME"
+# }
