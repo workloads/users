@@ -32,7 +32,7 @@ terraform {
 
     # see https://registry.terraform.io/providers/hashicorp/tfe/0.57.0
     tfe = {
-      source = "hashicorp/tfe"
+      source  = "hashicorp/tfe"
       version = "0.57.0"
     }
   }

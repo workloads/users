@@ -1,8 +1,9 @@
 # see https://registry.terraform.io/providers/okta/okta/latest/docs/resources/authenticator
 resource "okta_authenticator" "okta_email" {
-  key    = "okta_email"
-  name   = "Email"
-  status = "ACTIVE"
+  key                = "okta_email"
+  legacy_ignore_name = false
+  name               = "Email"
+  status             = "ACTIVE"
 
   settings = jsonencode({
     "allowedFor" : "recovery"
@@ -12,9 +13,9 @@ resource "okta_authenticator" "okta_email" {
 
 # see https://registry.terraform.io/providers/okta/okta/latest/docs/resources/authenticator
 resource "okta_authenticator" "okta_password" {
-  key    = "okta_password"
-  name   = "Password"
-  status = "ACTIVE"
+  key                = "okta_password"
+  legacy_ignore_name = false
+  name               = "Password"
 
   settings = jsonencode({
     "allowedFor" : "authentication"
@@ -22,21 +23,11 @@ resource "okta_authenticator" "okta_password" {
 }
 
 # see https://registry.terraform.io/providers/okta/okta/latest/docs/resources/authenticator
-resource "okta_authenticator" "security_question" {
-  key    = "security_question"
-  name   = "Security Question"
-  status = "ACTIVE"
-
-  settings = jsonencode({
-    "allowedFor" : "recovery"
-  })
-}
-
-# see https://registry.terraform.io/providers/okta/okta/latest/docs/resources/authenticator
 resource "okta_authenticator" "okta_verify" {
-  key    = "okta_verify"
-  name   = "Okta Verify"
-  status = "ACTIVE"
+  key                = "okta_verify"
+  legacy_ignore_name = false
+  name               = "Okta Verify"
+  status             = "ACTIVE"
 
   settings = jsonencode({
     "channelBinding" : {
@@ -49,5 +40,17 @@ resource "okta_authenticator" "okta_verify" {
     }
 
     "userVerification" : "PREFERRED"
+  })
+}
+
+# see https://registry.terraform.io/providers/okta/okta/latest/docs/resources/authenticator
+resource "okta_authenticator" "security_question" {
+  key                = "security_question"
+  legacy_ignore_name = false
+  name               = "Security Question"
+  status             = "ACTIVE"
+
+  settings = jsonencode({
+    "allowedFor" : "recovery"
   })
 }

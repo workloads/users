@@ -30,9 +30,9 @@ resource "okta_brand" "main" {
 data "okta_brands" "main" {}
 
 # see https://registry.terraform.io/providers/okta/okta/latest/docs/data-sources/themes
-#data "okta_themes" "main" {
-#  brand_id = tolist(data.okta_brands.main.brands)[0].id
-#}
+data "okta_themes" "main" {
+  brand_id = tolist(data.okta_brands.main.brands)[0].id
+}
 
 # `okta_theme` can only be modified after first importing it using `terraform import`.
 # Steps:

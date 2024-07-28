@@ -4,7 +4,7 @@ resource "okta_idp_social" "github" {
   client_id            = var.okta_social_login_github_client_id
   client_secret        = var.okta_social_login_github_client_secret
   deprovisioned_action = "NONE"
-  issuer_mode          = "DYNAMIC"
+  issuer_mode          = "CUSTOM_URL"
   name                 = "GitHub (Org: ${var.project_identifier})"
   profile_master       = true
   protocol_type        = "OIDC"
